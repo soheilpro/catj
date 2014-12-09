@@ -1,0 +1,31 @@
+{
+  "name": "catj",
+  "version": "1.0.0",
+  "description": "Displays JSON files in flat format. Handy when you need to find the full path of a node.",
+  "main": "catj.js",
+  "dependencies": {
+    "optimist": "~0.6.1",
+    "colors": "~1.0.3"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "catj": "./catj.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soheilpro/catj"
+  },
+  "keywords": [
+    "json",
+    "cat",
+    "flat"
+  ],
+  "author": "Soheil Rashidi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soheilpro/catj/issues"
+  }
+}

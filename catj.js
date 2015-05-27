@@ -45,10 +45,10 @@ function print(data) {
 function printObject(obj, path) {
   for (var prop in obj) {
     var value = obj[prop];
-    var nodePath = path + '.'.cyan + prop;
+    var nodePath = path + '.'.blue + prop;
 
     if (!isValidIdentifier(prop))
-      nodePath = (path ? path : '.'.cyan) + '["' + prop + '"]';
+      nodePath = (path ? path : '.'.blue) + '["' + prop + '"]';
 
     if (isArray(value))
       printArray(value, nodePath);
@@ -64,7 +64,7 @@ function printObject(obj, path) {
 function printArray(array, path) {
   for (var index in array) {
     var value = array[index];
-    var nodePath = (path ? path : '.'.cyan) + '[' + index.cyan + ']';
+    var nodePath = (path ? path : '.'.blue) + '[' + index.blue + ']';
 
     if (isArray(value))
       printArray(value, nodePath);
@@ -79,15 +79,15 @@ function printArray(array, path) {
 
 function printValue(value, path) {
   if (typeof value === 'string')
-    value = ('"' + value + '"').yellow;
+    value = ('"' + value + '"').green;
 
   if (typeof value === 'number')
-    value = value.toString().cyan;
+    value = value.toString();
 
   if (typeof value === 'boolean')
-    value = value.toString().green;
+    value = value.toString().yellow;
 
-  console.log(path + ': ' + value);
+  console.log(path + ' = ' + value);
 }
 
 function isArray(a) {

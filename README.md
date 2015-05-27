@@ -25,16 +25,16 @@ Input:
 Output:
 
 ```
-.movie.name: "Interstellar"
-.movie.year: 2014
-.movie.is_released: true
-.movie.director: "Christopher Nolan"
-.movie.cast[0]: "Matthew McConaughey"
-.movie.cast[1]: "Anne Hathaway"
-.movie.cast[2]: "Jessica Chastain"
-.movie.cast[3]: "Bill Irwin"
-.movie.cast[4]: "Ellen Burstyn"
-.movie.cast[5]: "Michael Caine"
+.movie.name = "Interstellar"
+.movie.year = 2014
+.movie.is_released = true
+.movie.director = "Christopher Nolan"
+.movie.cast[0] = "Matthew McConaughey"
+.movie.cast[1] = "Anne Hathaway"
+.movie.cast[2] = "Jessica Chastain"
+.movie.cast[3] = "Bill Irwin"
+.movie.cast[4] = "Ellen Burstyn"
+.movie.cast[5] = "Michael Caine"
 ```
 
 ## Install

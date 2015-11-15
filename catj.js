@@ -45,10 +45,10 @@ function print(data) {
 function printObject(obj, path) {
   for (var prop in obj) {
     var value = obj[prop];
-    var nodePath = path + '.'.blue + prop;
+    var nodePath = path + '.'.cyan + prop;
 
     if (!isValidIdentifier(prop))
-      nodePath = (path ? path : '.'.blue) + '["' + prop + '"]';
+      nodePath = (path ? path : '.'.cyan) + '["' + prop + '"]';
 
     if (isArray(value))
       printArray(value, nodePath);
@@ -64,7 +64,7 @@ function printObject(obj, path) {
 function printArray(array, path) {
   for (var index in array) {
     var value = array[index];
-    var nodePath = (path ? path : '.'.blue) + '[' + index.blue + ']';
+    var nodePath = (path ? path : '.'.cyan) + '[' + index.cyan + ']';
 
     if (isArray(value))
       printArray(value, nodePath);

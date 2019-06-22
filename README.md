@@ -1,22 +1,26 @@
 # catj
-Displays JSON files in flat format. Handy when you need to find the full path of a node.
+Displays JSON files in a flat format.
 
 Input:
 
 ```
 {
-  "movie": {
-    "name": "Interstellar",
-    "year": 2014,
-    "is_released": true,
-    "director": "Christopher Nolan",
-    "cast": [
-      "Matthew McConaughey",
-      "Anne Hathaway",
-      "Jessica Chastain",
-      "Bill Irwin",
-      "Ellen Burstyn",
-      "Michael Caine"
+  "mappings": {
+    "templates": [
+      {
+        "fields": {
+          "mapping": {
+            "norms": false,
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "ignore_above": 256,
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
     ]
   }
 }
@@ -25,17 +29,17 @@ Input:
 Output:
 
 ```
-.movie.name = "Interstellar"
-.movie.year = 2014
-.movie.is_released = true
-.movie.director = "Christopher Nolan"
-.movie.cast[0] = "Matthew McConaughey"
-.movie.cast[1] = "Anne Hathaway"
-.movie.cast[2] = "Jessica Chastain"
-.movie.cast[3] = "Bill Irwin"
-.movie.cast[4] = "Ellen Burstyn"
-.movie.cast[5] = "Michael Caine"
+.mappings.templates[0].fields.mapping.norms = false
+.mappings.templates[0].fields.mapping.type = "text"
+.mappings.templates[0].fields.mapping.fields.keyword.ignore_above = 256
+.mappings.templates[0].fields.mapping.fields.keyword.type = "keyword"
 ```
+
+## Why?
+
+- It makes it easier to understand the structure of JSON files.
+- The output is valid JavaScript which can be used directly in code.
+- It's very helpful when writing queries for tools like [jq](https://stedolan.github.io/jq/manual/).
 
 ## Install
 

@@ -3,7 +3,7 @@ Displays JSON files in a flat format.
 
 Input:
 
-```
+``` json
 {
   "mappings": {
     "templates": [
@@ -28,7 +28,7 @@ Input:
 
 Output:
 
-```
+``` bash
 .mappings.templates[0].fields.mapping.norms = false
 .mappings.templates[0].fields.mapping.type = "text"
 .mappings.templates[0].fields.mapping.fields.keyword.ignore_above = 256
@@ -43,13 +43,13 @@ Output:
 
 ## Install
 
-```
+``` bash
 npm install -g catj
 ```
 
 ## Usage
 
-```
+``` bash
 catj [file]
 ```
 
